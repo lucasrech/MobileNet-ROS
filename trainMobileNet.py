@@ -55,9 +55,9 @@ model = tf.keras.Sequential([base_model, tf.keras.layers.GlobalAveragePooling2D(
 
 model.compile(optimizer='rmsprop', loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True), metrics=['accuracy'])
 
-history = model.fit(X_train,y_train,epochs = 1 , validation_data = (X_test, y_test))
+history = model.fit(X_train,y_train,epochs = 150 , validation_data = (X_test, y_test))
 
-# model.save("/home/rech/Documents/LESC/Petro2021/TecChallenge/modelo3MobileNet.h5")
+model.save("/home/rech/Documents/LESC/Petro2021/TecChallenge/modelo3MobileNet.h5")
 
 from time import time 
 
